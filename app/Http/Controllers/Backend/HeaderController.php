@@ -5,6 +5,7 @@ namespace app\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Backend\Header;
+use App\Models\Backend\Project;
 use Intervention\Image\Facades\Image;
 
 
@@ -14,26 +15,20 @@ class HeaderController extends Controller
     public function HeaderView()
     {
         $headers = Header::all();
-        return view('backend.header.header_view', compact('headers'));
+        $projects = Project::all();
+        return view('backend.header.header_view', compact('headers','projects'));
     } // end method
 
     //Header Store
 
     public function HeaderStore(Request $request)
-    {
-
-        $request->validate(
-            [
+   
+    {  
+        $request->validate([
                 'image' => 'required|image|mimes:jpeg,png,jpg',
-            ],
-            [
-
                 'menu' => 'required',
-            ],
-            [
                 'sub_menu' => 'required'
-            ],
-        );
+            ]);
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
@@ -44,8 +39,8 @@ class HeaderController extends Controller
         }
 
         Header::insert([
-
             'menu'      => $request->menu,
+            'project_id'=> $request->project_id,
             'sub_menu'  => $request->sub_menu,
             'image'     => $save_url,
         ]);
@@ -91,8 +86,8 @@ class HeaderController extends Controller
             $header->image =  $path;
         }
 
+        $header->project_id =$request->project_id;
         $header->sub_menu = $request->sub_menu;
-        // $header->brand_slug = strtolower(str_replace(' ', '-', $request->brand_name));
         $header->menu = $request->menu;
 
         $header->save();
@@ -105,11 +100,6 @@ class HeaderController extends Controller
         return redirect()->route('header.view')->with($notification);
     }
 
- 
-
-
-
-
     //============= Header Delete=================
 
     public function HeaderDelete($id)
@@ -118,7 +108,6 @@ class HeaderController extends Controller
         $headers = Header::findOrFail($id);
 
         $img = $headers->image;
-        //  unlink($img);
 
         Header::findOrFail($id)->delete();
 

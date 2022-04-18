@@ -31,11 +31,7 @@
                 <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="fullscreen" href="#">
                     <i class="fe-maximize noti-icon"></i>
                 </a>
-            </li>
-    
-         
-         
-    
+            </li> 
             <li class="dropdown notification-list topbar-dropdown">
                 <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <img src="{{asset(Auth::guard('admin')->user()->profile_photo_path)}}" alt="user-image" class="rounded-circle">
@@ -47,23 +43,17 @@
                     <!-- item-->
                     <div class="dropdown-header noti-title">
                         <h6 class="text-overflow m-0">Welcome !</h6>
-                    </div>
-    
+                    </div> 
                     <!-- item-->
                     <a href="{{route('admin.profilePageShow')}}" class="dropdown-item notify-item">
                         <i class="fe-user"></i>
                         <span>My Account</span>
                     </a>
     
+                    <!-- item-->  
                     <!-- item-->
-                 
-    
-                    <!-- item-->
-                  
-    
-                    <div class="dropdown-divider"></div>
-    
-                    <!-- item-->
+                    <div class="dropdown-divider"></div> 
+                   <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <form method="POST" action="{{ route('admin.logout') }}">
                             @csrf
@@ -74,8 +64,7 @@
                                 {{ __('Log Out') }}
                             </x-jet-responsive-nav-link>
                         </form>
-                    </a>
-    
+                    </a>  
                 </div>
             </li>
     
@@ -84,9 +73,7 @@
                  
                 </a>
             </li>
-    
-        </ul>
-    
+        </ul>   
         <!-- LOGO -->
         <div class="logo-box">
             <a href="index.html" class="logo logo-dark text-center">
@@ -98,8 +85,7 @@
                     <img src="/assets/images/logo-dark.png" alt="" height="20">
                     <!-- <span class="logo-lg-text-light">U</span> -->
                 </span>
-            </a>
-    
+            </a>   
             <a href="index.html" class="logo logo-light text-center">
                 <span class="logo-sm">
                     <img src="/assets/images/logo-sm.png" alt="" height="22">
@@ -108,8 +94,8 @@
                     <img src="/assets/images/logo.png" alt="" height="20">
                 </span>
             </a>
-        </div>
-    
+        </div>  
+        </div>  
         <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
             <li>
                 <button class="button-menu-mobile waves-effect waves-light">

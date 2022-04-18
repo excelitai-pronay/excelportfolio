@@ -199,13 +199,13 @@ h2{
   color: #004079;
   border: none;
   background: none;
-  font-size: 40px;
+  font-size: 20px;
 }
 .image-section  .swiper-button-prev{
   color: #004079;
   border: none;
   background: none;
-  font-size: 40px;
+  font-size: 20px;
 }
 .image-section >  .swiper-button-next::after, .swiper-button-prev::after{
   display: none;
@@ -306,7 +306,7 @@ h2{
   margin-bottom: 30px;
   font-weight: 900;
 	background: linear-gradient(to bottom, #02435C 0%, #0360B3  100%);
-	-webkit-background-clip: text;
+	/* -webkit-background-clip: text; */
 	-webkit-text-fill-color: transparent;
 }
 .footer-section .footer-top .ft-single .ft-box-one .ft-data .location {

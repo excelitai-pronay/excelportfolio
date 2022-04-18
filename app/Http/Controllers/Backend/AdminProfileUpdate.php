@@ -85,7 +85,7 @@ class AdminProfileUpdate extends Controller
                 $destination = public_path($admins->profile_photo_path);
     
                 if (file_exists($destination)) {
-                    unlink($destination);
+                   
                 }
 
                 $image = $request->file('profile_photo_path');
@@ -95,6 +95,7 @@ class AdminProfileUpdate extends Controller
                 $path = 'upload/admin_img/' .$name;
     
                 $admins->profile_photo_path =  $path;
+                
             }
     
             $admins->name= $request->name;

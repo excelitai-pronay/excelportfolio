@@ -15,4 +15,8 @@ class Feature extends Model
         'title',
         'content',
     ];
+    public function project(){
+
+        return $this->belongsTo(Project::class,'project_id','id');
+    }
 }

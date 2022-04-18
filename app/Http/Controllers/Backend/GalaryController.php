@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Backend\Galary;
+use App\Models\Backend\Project;
 use Illuminate\Http\Request;
 
 class GalaryController extends Controller
@@ -11,14 +12,14 @@ class GalaryController extends Controller
     //Image galary view
     public function GalaryView()
     {
-        $galaries = Galary::all();
-        return view('backend.galary.galary_view', compact('galaries'));
+        
+        $projects = Project::with('galary')->get();
+        return view('backend.galary.galary_view', compact('projects'));
     }//end method
 
     //Image galary store
     public function GalaryStore(Request $request)
     {
-
         $request->validate(
             [
                 'image' => 'required|image|mimes:jpeg,png,jpg',
@@ -36,8 +37,8 @@ class GalaryController extends Controller
 
         Galary::insert([
 
-          
             'image'     => $save_url,
+            'project_id'=>$request->project_id,
         ]);
 
 
@@ -53,9 +54,7 @@ class GalaryController extends Controller
 
     public function GalaryEdit($id)
     {
-
         $galaries = Galary::findOrFail($id);
-
         return view('backend.galary.galary_edit', compact('galaries'));
     } // end method
 

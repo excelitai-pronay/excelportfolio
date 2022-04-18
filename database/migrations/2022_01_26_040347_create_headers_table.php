@@ -15,6 +15,7 @@ class CreateHeadersTable extends Migration
     {
         Schema::create('headers', function (Blueprint $table) {
             $table->id();
+            $table->integer('project_id');
             $table->string('image');
             $table->string('menu');
             $table->string('sub_menu');

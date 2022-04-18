@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Backend\Core;
+use App\Models\Backend\Project;
 
 class CoreController extends Controller
 {
@@ -12,7 +13,8 @@ class CoreController extends Controller
      public function CoreView()
      {
          $cores = core::all();
-         return view('backend.core.core_view', compact('cores'));
+         $projects = Project::all();
+         return view('backend.core.core_view', compact('cores','projects'));
      } // end method
 
      //Core feature store
@@ -23,13 +25,7 @@ class CoreController extends Controller
         $request->validate(
             [
                 'image' => 'required|image|mimes:jpeg,png,jpg',
-            ],
-            [
-
                 'heading' => 'required',
-            ],
-            [
-
                 'content' => 'required',
             ],
            
@@ -44,10 +40,10 @@ class CoreController extends Controller
             $save_url = '/upload/core_img/'.$name;
         }
 
-        Core::insert([
-
-          
+        Core::insert([ 
+            
             'heading'   => $request->heading,  
+            'project_id'=> $request->project_id,  
             'content'   => $request->content,
             'image'     => $save_url,
         ]);

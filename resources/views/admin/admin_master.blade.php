@@ -9,7 +9,7 @@
         <meta content="Coderthemes" name="author"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <!-- App favicon -->
-        <link rel="shortcut icon" href="{{asset('backend/assets/images/favicon.ico')}}">
+        <link rel="shortcut icon" href="{{asset('backend/assets/images/logo.png')}}">
 
         <!-- Plugins css -->
         <link href="{{ asset ('backend/assets/libs/flatpickr/flatpickr.min.css')}}" rel="stylesheet" type="text/css" />
@@ -23,7 +23,10 @@
         <link href="{{ asset ('backend/assets/css/config/material/app-dark.min.css')}}" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
 
         <!-- icons -->
-        <link href="{{ asset ('backend/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset ('backend/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css"/>
+
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         @yield('css')
 
     </head>

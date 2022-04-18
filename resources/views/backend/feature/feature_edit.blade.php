@@ -2,7 +2,6 @@
 
 
 @section('css')
-{{-- <link href="{{asset('wordform')}}/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css"> --}}
 <!-- Icons Css -->
 <link href="{{asset('wordform')}}/css/icons.min.css" rel="stylesheet" type="text/css">
 <!-- App Css-->
@@ -10,9 +9,6 @@
 @endsection
 
 @section('admin')
-
-  
-
     <div class="container-full">
         <section class="content">
 
@@ -31,12 +27,9 @@
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-
-
                                 <form method="POST" action="{{ route('feature.update', $features->id) }}"
                                     enctype="multipart/form-data">
                                     @csrf
-
                                     <div class="form-group">
                                         <h5>Image <span class="text-danger">*</span></h5>
                                         <div class="controls">
@@ -51,7 +44,6 @@
                                         </div>
                                         <img src="{{asset($features->image)}}" alt="" width="100" height="70">
                                     </div>
-
                                     <div class="form-group">
                                         <h5>Title <span class="text-danger">*</span></h5>
                                         <div class="controls">
@@ -64,21 +56,15 @@
                                                 </span>
                                             @enderror
                                         </div>
-                                     
                                     </div>
                                     <br>
-                          
                                     <div class="form-group">
                                         <div class="row">
                                           <div class="col-12">
                                               <div class="card">
                                                 <h5>Feature Content<span class="text-danger">*</span></h5>
-                                                  <div class="card-body">
-              
-                                                     
+                                                  <div class="card-body">   
                                                     <textarea id="elm1" name="content" style="width: 100%">{!!$features->content!!}</textarea>
-                                                      
-              
                                                   </div>
                                               </div>
                                           </div> <!-- end col -->
@@ -92,11 +78,6 @@
                                     </div>
 
                                 </form>
-
-
-
-
-
                             </div> <!-- table res.. end -->
                         </div> <!-- box body end -->
                     </div> <!-- box end -->
@@ -116,11 +97,6 @@
   console.log('here');
 </script>
 <script src="assets/libs/jquery/jquery.min.js"></script>
-        {{-- <script src="{{asset('wordform')}}/libs/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
-        {{-- <script src="{{asset('wordform')}}/libs/metismenu/metisMenu.min.js"></script> --}}
-        {{-- <script src="{{asset('wordform')}}/libs/simplebar/simplebar.min.js"></script> --}}
-        {{-- <script src="{{asset('wordform')}}/libs/node-waves/waves.min.js"></script> --}}
-
         <!--tinymce js-->
         <script src="{{asset('wordform')}}/libs/tinymce/tinymce.min.js"></script>
 

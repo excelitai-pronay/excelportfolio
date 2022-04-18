@@ -1,27 +1,18 @@
 @extends('admin.admin_master')
-
 @section('css')
-{{-- <link href="{{asset('wordform')}}/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css"> --}}
-<!-- Icons Css -->
-<link href="{{asset('wordform')}}/css/icons.min.css" rel="stylesheet" type="text/css">
-<!-- App Css-->
-<link href="{{asset('wordform')}}/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
+    <!-- Icons Css -->
+    <link href="{{ asset('wordform') }}/css/icons.min.css" rel="stylesheet" type="text/css">
+    <!-- App Css-->
+    <link href="{{ asset('wordform') }}/css/app.min.css" id="app-style" rel="stylesheet" type="text/css">
 @endsection
 
 @section('admin')
-
-   
     <div class="container-full">
         <section class="content">
-
             <div class="row">
-
                 <div class="col-lg-3"></div>
-
                 <!--================================ Header Update ======================================- -->
-
                 <div class="col-lg-6">
-
                     <div class="box">
                         <div class="box-header with-border">
                             <h3 class="box-title">Core Feature Update</h3>
@@ -29,8 +20,6 @@
                         <!-- /.box-header -->
                         <div class="box-body">
                             <div class="table-responsive">
-
-
                                 <form method="POST" action="{{ route('core.update', $cores->id) }}"
                                     enctype="multipart/form-data">
                                     @csrf
@@ -38,8 +27,7 @@
                                     <div class="form-group">
                                         <h5>Image <span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <input type="file" id="image" name="image"
-                                                class="form-control">
+                                            <input type="file" id="image" name="image" class="form-control">
 
                                             @error('image')
                                                 <span class="invalid-feedback" role="alert">
@@ -47,12 +35,13 @@
                                                 </span>
                                             @enderror
                                         </div>
-                                        <img src="{{asset($cores->image)}}" alt="" width="100" height="70">
+                                        <img src="{{ asset($cores->image) }}" alt="" width="100" height="70">
                                     </div>
                                     <div class="form-group">
                                         <h5> Heading <span class="text-danger">*</span></h5>
                                         <div class="controls">
-                                            <input type="text" id="heading" name="heading" class="form-control" value="{{$cores->heading}}">
+                                            <input type="text" id="heading" name="heading" class="form-control"
+                                                value="{{ $cores->heading }}">
 
                                             @error('heading')
                                                 <span class="invalid-feedback" role="alert">
@@ -65,63 +54,44 @@
 
                                     <div class="form-group">
                                         <div class="row">
-                                          <div class="col-12">
-                                              <div class="card">
-                                                <h5>Core Content<span class="text-danger">*</span></h5>
-                                                  <div class="card-body">
-              
-                                                     
-                                                    <textarea id="elm1" name="content" style="width: 100%">{!!$cores->content!!}</textarea>
-                                                      
-              
-                                                  </div>
-                                              </div>
-                                          </div> <!-- end col -->
-                                        </div> 
+                                            <div class="col-12">
+                                                <div class="card">
+                                                    <h5>Core Content<span class="text-danger">*</span></h5>
+                                                    <div class="card-body">
+
+
+                                                        <textarea id="elm1" name="content" style="width: 100%">{!! $cores->content !!}</textarea>
+
+
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end col -->
+                                        </div>
                                     </div>
                                     <br>
-                                   
+
                                     <div class="text-xs-right">
                                         <input type="submit" class="btn btn-rounded btn-info" value="Update Core Feature">
                                     </div>
-
                                 </form>
-
-
-
-
-
                             </div> <!-- table res.. end -->
                         </div> <!-- box body end -->
                     </div> <!-- box end -->
                 </div> <!-- col end -->
-
             </div> <!--  row end-->
         </section> <!--  content end-->
     </div> <!--  row end-->
-
     <div class="col-lg-3"></div>
-
-
-
 @endsection
 
 @section('script')
-<script>
-  console.log('here');
-</script>
-<script src="assets/libs/jquery/jquery.min.js"></script>
-        {{-- <script src="{{asset('wordform')}}/libs/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
-        {{-- <script src="{{asset('wordform')}}/libs/metismenu/metisMenu.min.js"></script> --}}
-        {{-- <script src="{{asset('wordform')}}/libs/simplebar/simplebar.min.js"></script> --}}
-        {{-- <script src="{{asset('wordform')}}/libs/node-waves/waves.min.js"></script> --}}
-
-        <!--tinymce js-->
-        <script src="{{asset('wordform')}}/libs/tinymce/tinymce.min.js"></script>
-
-        <!-- init js -->
-        <script src="{{asset('wordform')}}/js/pages/form-editor.init.js"></script>
-
-        <script src="{{asset('wordform')}}/js/app.js"></script>
-    
+    <script>
+        console.log('here');
+    </script>
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <!--tinymce js-->
+    <script src="{{ asset('wordform') }}/libs/tinymce/tinymce.min.js"></script>
+    <!-- init js -->
+    <script src="{{ asset('wordform') }}/js/pages/form-editor.init.js"></script>
+    <script src="{{ asset('wordform') }}/js/app.js"></script>
 @endsection

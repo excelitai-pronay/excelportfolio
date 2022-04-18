@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\AdminProfileUpdate;
+use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\CoreController;
 use App\Http\Controllers\Backend\FeatureController;
 use App\Http\Controllers\Backend\HeaderController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\Backend\SliderController;
 use App\Http\Controllers\Backend\GalaryController;
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\ProjectDetailsController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -27,9 +29,18 @@ use Laravel\Fortify\Http\Controllers\RegisteredUserController;
 |
 */
 
+// Homepage Routes Start
+// Route::get('/', function () {
+//        return view('homepage.index_home');
+//      });
+
+//Homepage Routes End
+
 
 // Frontend Routes Start
+// Route::get('/', [IndexController::class, 'index'])->name('home');
 Route::get('/', [IndexController::class, 'index'])->name('home');
+Route::get('/projectdetails/{id}', [ProjectDetailsController::class, 'details'])->name('projectdetails');
 
 // Frontend Routes End
 
@@ -88,6 +99,18 @@ Route::prefix('admin')->name('admin.')->group(function()
     }
 
 });
+
+
+    // Project route group
+
+    Route::prefix('project')->group(function(){
+
+        Route::get('/view',[ProjectController::class,'ProjectView'])->name('project.view');
+        Route::post('/store',[ProjectController::class,'ProjectStore'])->name('project.store');
+        Route::get('/edit/{id}',[ProjectController::class,'ProjectEdit'])->name('project.edit');
+        Route::post('/update/{id}',[ProjectController::class,'ProjectUpdate'])->name('project.update');
+        Route::get('/delete/{id}',[ProjectController::class,'ProjectDelete'])->name('project.delete');
+    });
 
 
     // Header Image route group

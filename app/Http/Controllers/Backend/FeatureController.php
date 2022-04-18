@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Backend\Feature;
+use App\Models\Backend\Project;
 
 class FeatureController extends Controller
 {
@@ -13,24 +14,17 @@ class FeatureController extends Controller
     public function FeaturesView()
       {
           $features = Feature::all();
-          return view('backend.feature.feature_view', compact('features'));
+          $projects = Project::all();
+          return view('backend.feature.feature_view', compact('features','projects'));
       } // end method
-
-
-      
+     
     public function FeaturesStore(Request $request)
     {
 
         $request->validate(
             [
                 'image' => 'required|image|mimes:jpeg,png,jpg',
-            ],
-            [
-
                 'title' => 'required',
-            ],
-            [
-
                 'content' => 'required',
             ],
            
@@ -43,13 +37,13 @@ class FeatureController extends Controller
             $image->move(public_path('/upload/feature_img'), $name);
             $save_url = '/upload/feature_img/'.$name;
         }
+ 
 
         Feature::insert([
 
-          
-            
             'image'     => $save_url,
-            'title'   => $request->title,
+            'title'     => $request->title,
+            'project_id'=> $request->project_id,
             'content'   => $request->content,
         ]);
 
@@ -77,7 +71,7 @@ class FeatureController extends Controller
      {
          $feature = Feature::find($id);
  
-         if ($request->file('image')) {
+            if ($request->file('image')) {
  
              $destination = public_path($feature->image);
  

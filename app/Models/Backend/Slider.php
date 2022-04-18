@@ -14,4 +14,8 @@ class Slider extends Model
         'image',
         'content',
     ];
+    public function project(){
+
+        return $this->belongsTo(Project::class,'project_id','id');
+    }
 }

@@ -68,9 +68,6 @@
                                 </form>
 
 
-
-
-
                             </div> <!-- table res.. end -->
                         </div> <!-- box body end -->
                     </div> <!-- box end -->
@@ -81,14 +78,5 @@
     </div> <!--  row end-->
 
     <div class="col-lg-3"></div>
-
-
-
-
-
-
-
-
-
 
 @endsection

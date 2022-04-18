@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.css')}}" />
 	<link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}" />
-	<link rel="stylesheet" href="{{asset('frontend/assets/css/menubar.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/assets/css/menubar.css')}}"/>
 
 	
 	<!--animation link-->
@@ -18,8 +18,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
 	<!--fontawesome link-->
-	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<title>ExcelItAi</title>
 </head>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="25">
@@ -29,12 +28,6 @@
 		@include('frontend.body.header')
 
 	<!-- header section end here -->
-	<section class="home-section" style="background: url({{asset($header->image)}}) #041F2A; background-repeat: no-repeat; background-size: cover; background-position: center center;">
-		<div class="text-center">
-			<h1>{{$header->menu}}</h1>
-		    <p>{{$header->sub_menu}}</p>
-		</div>
-	</section>
 
 	<!---- Content Start Here -------->
 

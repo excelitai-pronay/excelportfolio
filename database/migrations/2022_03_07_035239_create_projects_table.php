@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCoresTable extends Migration
+class CreateProjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateCoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('cores', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->string('heading');
-            $table->longText('content');
+            $table->string('icon');
+            $table->string('title');
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateCoresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cores');
+        Schema::dropIfExists('projects');
     }
 }

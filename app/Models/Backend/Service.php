@@ -14,4 +14,8 @@ class Service extends Model
         'number',
         'content',
     ];
+    public function project(){
+
+        return $this->belongsTo(Project::class,'project_id','id');
+    }
 }

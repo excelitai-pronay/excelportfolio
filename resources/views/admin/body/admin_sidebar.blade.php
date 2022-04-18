@@ -1,7 +1,6 @@
 <div class="left-side-menu">
 
     <div class="h-100" data-simplebar>
-
         <!-- User box -->
         <div class="user-box text-center">
             <img src="../assets/images/users/user-1.jpg" alt="user-img" title="Mat Helme"
@@ -16,86 +15,70 @@
                         <i class="fe-user me-1"></i>
                         <span>My Account</span>
                     </a>
-
-                 
-
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <i class="fe-lock me-1"></i>
                         <span>Lock Screen</span>
                     </a>
-
-                    <!-- item-->
+                   <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <i class="fe-log-out me-1"></i>
                         <span>Logout</span>
                     </a>
-
                 </div>
             </div>
             <p class="text-muted">Admin Head</p>
         </div>
-
         <!--- Sidemenu -->
         <div id="sidebar-menu">
-
-            <ul id="side-menu">
-
-                <!-- <li class="menu-title">Navigation</li> -->
-    
+            <ul id="side-menu">   
+                
                 <li>
-                    <a href="#sidebarDashboards" data-bs-toggle="collapse">
-                        <i class="mdi mdi-view-dashboard-outline"></i>
-                        <span> Dashboards </span>
+                    <a href="{{ route('admin.dashboard')}}">
+                        <i class="mdi mdi-domain"></i>
+                        <span>Dashboard</span>
                     </a>
-                  <div class="collapse" id="sidebarDashboards">
-                        <ul class="nav-second-level">
-                            <li>
-                                <a href="{{ route('admin.dashboard')}}">Dashboard </a>
-                            </li>
-                           
-                        </ul>
-                    </div> 
-                </li>
-
-                <!-- <li class="menu-title mt-2">Apps</li> -->
-           
+                </li>   
                 <li>
                     <a href="{{ route('header.view')}}">
-                        <i class="mdi mdi-domain"></i>
+                        <i class="fa-solid fa-masks-theater"></i>
                         <span> Header </span>
                     </a>
                 </li>
-
                 <li>
                     <a href="{{ route('slider.view')}}">
-                        <i class="mdi mdi-domain"></i>
+                        <i class="fa-brands fa-accusoft"></i>
                         <span> Slider </span>
                     </a>
                 </li>
-
                 <li>
                     <a href="{{ route('core.view')}}">
-                        <i class="mdi mdi-domain"></i>
+                        <i class="fa-brands fa-affiliatetheme"></i>
                         <span> Core Feature </span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('feature.view')}}">
-                        <i class="mdi mdi-domain"></i>
+                        <i class="fa-solid fa-asterisk"></i>
                         <span>Feature Details </span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('galary.view')}}">
-                        <i class="mdi mdi-domain"></i>
+                        <i class="fa-solid fa-campground"></i>
                         <span> Image Galary </span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('service.view')}}">
-                        <i class="mdi mdi-domain"></i>
+                        <i class="fa-brands fa-battle-net"></i>
                         <span> Service Package </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('project.view')}}">
+                        <i class="fa-solid fa-cannabis"></i>
+                        <span> Add Project </span>
                     </a>
                 </li>
 

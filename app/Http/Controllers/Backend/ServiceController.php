@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Backend\Service;
+use App\Models\Backend\Project;
 
 class ServiceController extends Controller
 {
@@ -13,7 +14,8 @@ class ServiceController extends Controller
       public function ServiceView()
       {
           $services = Service::all();
-          return view('backend.service.service_view', compact('services'));
+          $projects = Project::all();
+          return view('backend.service.service_view', compact('services','projects'));
       } // end method
 
       //service package store
@@ -21,17 +23,10 @@ class ServiceController extends Controller
       public function ServiceStore(Request $request)
     {
 
-        
-
         $request->validate(
             [
                 'title' => 'required',
-            ],
-            [
-
                 'number' => 'required',
-            ],
-            [
                 'content' => 'required'
             ],
         );
@@ -40,6 +35,7 @@ class ServiceController extends Controller
         Service::insert([
 
         'title'      => $request->title,
+        'project_id' => $request->project_id,
         'number'     => $request->number,
         'content'    => $request->content,
         ]);
@@ -74,11 +70,9 @@ class ServiceController extends Controller
            $service = Service::find($id);
    
            
-           $service->title = $request->title;
-          
+           $service->title = $request->title;          
            $service->number = $request->number;
            $service->content = $request->content;
-
            $service->save();
    
      
@@ -94,10 +88,7 @@ class ServiceController extends Controller
        public function ServiceDelete($id)
        {
    
-           $services = Service::findOrFail($id);
-
-           
-   
+           $services = Service::findOrFail($id);       
            Service::findOrFail($id)->delete();
    
            $notification = array(

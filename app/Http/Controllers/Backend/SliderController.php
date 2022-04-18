@@ -5,14 +5,19 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Backend\Slider;
+use App\Models\Backend\Project;
 
 class SliderController extends Controller
 {
     //Slider View
     public function SliderView()
     {
-        $sliders = Slider::all();
-        return view('backend.slider.slider_view', compact('sliders'));
+        
+        $projects = Project::With('slider')->get();
+        return view('backend.slider.slider_view', compact('projects'));
+
+
+       
     } // end method
 
     //Slider Store
@@ -23,12 +28,9 @@ class SliderController extends Controller
         $request->validate(
             [
                 'image' => 'required|image|mimes:jpeg,png,jpg',
-            ],
-            [
-
                 'content' => 'required',
             ],
-           
+                    
         );
 
         if ($request->hasFile('image')) {
@@ -40,10 +42,9 @@ class SliderController extends Controller
         }
 
         Slider::insert([
-
-          
-            'content'   => $request->content,
-            'image'     => $save_url,
+            'content'      => $request->content,
+            'project_id'   => $request->project_id,
+            'image'        => $save_url,
         ]);
 
 
@@ -60,7 +61,6 @@ class SliderController extends Controller
        {
    
            $sliders = Slider::findOrFail($id);
-   
            return view('backend.slider.slider_edit', compact('sliders'));
        } // end method
 
@@ -89,7 +89,6 @@ class SliderController extends Controller
 
        
         $slider->content= $request->content;
-
         $slider->save();
 
         $notification = array(
@@ -106,10 +105,7 @@ class SliderController extends Controller
      {
  
          $sliders = Slider::findOrFail($id);
- 
          $img = $sliders->image;
-         
- 
          Slider::findOrFail($id)->delete();
  
          $notification = array(
