@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css')}}" />
 	<link rel="stylesheet" href="{{ asset('frontend/assets/css/menubar.css')}}">
 
-	
+
 	<!--animation link-->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!--css link for swiper-->
@@ -19,7 +19,7 @@
 
 	<!--fontawesome link-->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-	
+
 	<title>ExcelItAi</title>
 </head>
 <body data-spy="scroll" data-target="#navbarNav" data-offset="25">
@@ -31,7 +31,7 @@
 				<div class="container-fluid">
 				  <a class="navbar-brand" href="index.html"><img src="{{('frontend/assets/img/logo.png')}}" alt="logo"></a>
 				  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>            
+					<span class="navbar-toggler-icon"></span>
 				  </button>
 				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto">
@@ -48,12 +48,12 @@
 						  <li><a class="dropdown-item" href="https://excelitai.com/organogram">Organogram</a></li>
 						  <li><a class="dropdown-item" href="https://excelitai.com/methodology">Methodology</a></li>
 						  <li>
-							<a class="dropdown-item" href="#">Team &nbsp; &nbsp; &nbsp; <span ><i class="fas fa-angle-right ml-3"></i></span></a> 
+							<a class="dropdown-item" href="#">Team &nbsp; &nbsp; &nbsp; <span ><i class="fas fa-angle-right ml-3"></i></span></a>
 							<ul class="submenu">
 							  <li><a class="submenu-item" href="https://excelitai.com/management">Management</a></li>
-							  <li><a class="submenu-item" href="https://excelitai.com/team/software-team">Software Team</a></li>                                      
+							  <li><a class="submenu-item" href="https://excelitai.com/team/software-team">Software Team</a></li>
 							</ul>
-						  </li>                             
+						  </li>
 						</ul>
 					  </li>
 					  <li class="nav-item dropdown">
@@ -61,10 +61,10 @@
 						  Course
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <li><a class="dropdown-item" href="https://excelitai.com/course/laravel-course"> Laravel </a></li>                      
-						  <li><a class="dropdown-item" href="https://excelitai.com/course/flutter-course"> Flutter </a></li>                      
-						  <li><a class="dropdown-item" href="https://excelitai.com/course/ui/ux-course"> UI/UX Design </a></li>                      
-						  <li><a class="dropdown-item" href="https://excelitai.com/course/digital-marketing"> Degital Marketing </a></li>                      
+						  <li><a class="dropdown-item" href="https://excelitai.com/course/laravel-course"> Laravel </a></li>
+						  <li><a class="dropdown-item" href="https://excelitai.com/course/flutter-course"> Flutter </a></li>
+						  <li><a class="dropdown-item" href="https://excelitai.com/course/ui/ux-course"> UI/UX Design </a></li>
+						  <li><a class="dropdown-item" href="https://excelitai.com/course/digital-marketing"> Degital Marketing </a></li>
 						</ul>
 					  </li>
 					  <li class="nav-item dropdown">
@@ -72,26 +72,26 @@
 						  Services
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-						  <li><a class="dropdown-item" href="https://excelitai.com/service/web-application"> Web Application Development </a></li>                      
-						  <li><a class="dropdown-item" href="https://excelitai.com/service/mobile-application"> Mobile Application Development </a></li>                      
-						  <li><a class="dropdown-item" href="https://excelitai.com/services/ui-ux-design"> UI/UX Design </a></li>                      
-						  <li><a class="dropdown-item" href="https://excelitai.com/services/custom-software"> Custom Software Development </a></li>                      
-						  <li><a class="dropdown-item" href="https://excelitai.com/services/digital-marketing"> Degital Marketing </a></li>                      
+						  <li><a class="dropdown-item" href="https://excelitai.com/service/web-application"> Web Application Development </a></li>
+						  <li><a class="dropdown-item" href="https://excelitai.com/service/mobile-application"> Mobile Application Development </a></li>
+						  <li><a class="dropdown-item" href="https://excelitai.com/services/ui-ux-design"> UI/UX Design </a></li>
+						  <li><a class="dropdown-item" href="https://excelitai.com/services/custom-software"> Custom Software Development </a></li>
+						  <li><a class="dropdown-item" href="https://excelitai.com/services/digital-marketing"> Degital Marketing </a></li>
 						</ul>
 					  </li>
 					  <li class="nav-item">
 						<a class="nav-link" href="index.html">Our Project Demo</a>
-					  </li>           
+					  </li>
 					  <li class="nav-item">
 						<a class="nav-link" href="https://excelitai.com/career">Career</a>
 					  </li>
 					  <li class="nav-item">
 						<a class="nav-link" href="https://excelitai.com/contact">Contact Us</a>
-					  </li> 
+					  </li>
 					</ul>
 				</div>
 			</nav>
-		</div>        
+		</div>
     </header>
 	<!-- header section end here -->
 	<section class="home-section">
@@ -159,7 +159,7 @@
 		<button class="swiper-button-next"> <i class="fas fa-angle-double-right pt-5"></i>  </button>
 		<button class="swiper-button-prev"><i class="fas fa-angle-double-left pt-5"></i> </button>
 	</div>
-	
+
 	<!--Core FEATURE SECTION -->
 	<section class="core-feature-section col-lg-12">
 		<div class="container-fluid">
@@ -225,11 +225,11 @@
 					</div>
 					<p class="text-center">Smart Card System</p>
 				</div>
-				
+
 			</div>
 		</div>
 	</section>
-	
+
 	<!-- FEATURE DETAILS SECTION -->
 	<section class="feature-detail-section col-lg-12">
 		<div class="container">
@@ -296,7 +296,7 @@
 					<div class="swiper-slide">
 						<a href=""><img src="{{('frontend/assets/img/slide.jpg')}}" alt="" class="img-fluid" /></a>
 					</div>
-	
+
 					<div class="swiper-slide">
 						<a href=""><img src="{{('frontend/assets/img/slide.jpg')}}" alt="" class="img-fluid" /></a>
 					</div>
@@ -456,7 +456,7 @@
 						</div>
 					  </div>
 					</div>
-				  </div>             
+				  </div>
 				</div>
 			  </div>
 			  <!-- col end -->
@@ -472,10 +472,10 @@
 							<li class="hover"><a href="#"> Education </a></li>
 							<li class="hover"><a href="#"> Real Estate </a></li>
 							<li class="hover"><a href="#"> Retail Software </a></li>
-						  </ul>                
+						  </ul>
 					  </div>
 				  </div>
-				</div>             
+				</div>
 			  </div>
 			  <!-- col end -->
 			  <div class="col-lg-4 col-md-6 col-12">
@@ -487,7 +487,7 @@
 								 <p class="hover">Our Goal Is To Help Your Company For Achieving Best Class Positions To Your Respective Field</p>
 								</div>
 							</div>
-					  </div> 
+					  </div>
 					  <div class="ft-social">
 						  <ul>
 							<li class="hover"><a class="fb"  href="https://www.facebook.com/shaplacityltd/" target="blank"> <i class="fab fa-facebook-f"></i> </a></li>
@@ -496,8 +496,8 @@
 							<li class="hover"><a class="ins" href="https://www.instagram.com/shaplacity/?hl=bn" target="blank"> <i class="fab fa-instagram inytbColor"></i>  </a></li>
 							<li class="hover"><a  class="youtube" href="https://www.youtube.com/channel/UCKVQNkBekad0IiGwZGaggAQ" target="blank"> <i class="fab fa-youtube inytbColor"></i> </a></li>
 						  </ul>
-					  </div> 
-				</div>           
+					  </div>
+				</div>
 			  </div>
 			</div>
 			<!-- row end -->
@@ -516,7 +516,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- footer bottom start -->
 		<div class="footer-bottom">
 		  <div class="container">
@@ -538,15 +538,15 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<!--Aos cdn-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-	
+
 	<script>
 		AOS.init({
-			duration: 2000, 
+			duration: 2000,
 		});
 	</script>
 
 
-	
+
 	<!-- SCRIPT for swiper slider -->
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 	<script type="module">
@@ -580,7 +580,7 @@
 					slidesPerView: 3,
 					spaceBetween: 20
 				},
-				
+
 				1232: {
 					slidesPerView: 4,
 					spaceBetween: 20
@@ -622,7 +622,7 @@
 					slidesPerView: 3,
 					spaceBetween: 10
 				},
-				
+
 				1232: {
 					slidesPerView: 5,
 					spaceBetween: 10
@@ -635,7 +635,7 @@
 			},
 		});
 	</script>
-	
+
 
 </body>
 

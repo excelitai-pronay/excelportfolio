@@ -18,8 +18,7 @@ class ProjectDetailsController extends Controller
     public function details($id){
 
             $project = Project::with('header','core','feature','galary','service','slider')->find($id);
-            // dd($project->galary[0]->project_id);
-            // dd($project->slider);
+            
 
             return view('frontend.index', compact('project'));
         }

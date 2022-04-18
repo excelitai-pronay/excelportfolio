@@ -14,7 +14,7 @@
         <!-- Plugins css -->
         <link href="{{ asset ('backend/assets/libs/flatpickr/flatpickr.min.css')}}" rel="stylesheet" type="text/css" />
         <link href="{{ asset ('backend/assets/libs/selectize/css/selectize.bootstrap3.css')}}" rel="stylesheet" type="text/css" />
-        
+
         <!-- App css -->
         <link href="{{ asset ('backend/assets/css/config/material/bootstrap.min.css')}}" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
         <link href="{{ asset ('backend/assets/css/config/material/app.min.css')}}" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
@@ -43,7 +43,7 @@
             <!-- ========== end Topbar ========== -->
 
             <!-- ========== Left Sidebar Start ========== -->
-                @include('admin.body.admin_sidebar')  
+                @include('admin.body.admin_sidebar')
 
             <!-- ==========  Left Sidebar End ========== -->
 
@@ -57,7 +57,7 @@
                 <!-- Footer Start -->
 
                 @include('admin.body.admin_footer')
-               
+
                 <!-- end Footer -->
 
             </div>
@@ -71,7 +71,7 @@
         <!-- END wrapper -->
 
         <!-- Right Sidebar -->
-        
+
         <!-- /Right-bar -->
 
         <!-- Right bar overlay-->
@@ -126,6 +126,6 @@
         </script>
 
         @yield('script')
-        
+
     </body>
 </html>

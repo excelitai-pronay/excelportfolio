@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Log In | UBold - Responsive Admin Dashboard Template</title>
+        <title>Log In</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -31,7 +31,7 @@
                         <div class="card bg-pattern">
 
                             <div class="card-body p-4">
-                                
+
                                 <div class="text-center w-75 m-auto">
                                     <div class="auth-logo">
                                         <a href="index.html" class="logo logo-dark text-center">
@@ -39,7 +39,7 @@
                                                 <img src="../assets/images/logo.png" alt="" height="22">
                                             </span>
                                         </a>
-                    
+
                                         <a href="index.html" class="logo logo-light text-center">
                                             <span class="logo-lg">
                                                 <img src="../assets/images/logo-light.png" alt="" height="22">
@@ -79,12 +79,12 @@
 
                                 </form>
 
-                            
+
                             </div> <!-- end card-body -->
                         </div>
                         <!-- end card -->
 
-                        
+
                         <!-- end row -->
 
                     </div> <!-- end col -->
@@ -105,6 +105,6 @@
 
         <!-- App js -->
         <script src="../assets/js/app.min.js"></script>
-        
+
     </body>
 </html>
